@@ -6,7 +6,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useEffect, useState } from 'react';
 import { fetchCourses } from '../store/slices/course';
 import { searchCourse } from '../store/slices/course';
-import Button from 'react-bootstrap/button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
@@ -49,7 +48,6 @@ function NavBar() {
                 onChange={handleSearch}
                 value = {search}
               />
-              <Button variant="secondary" onClick={e => {dispatch(fetchCourses()); setSearch('')}}>Reset</Button>{' '}
             </Form>
 
           ) : (
